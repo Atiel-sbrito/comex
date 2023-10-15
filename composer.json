@@ -1,0 +1,16 @@
+{
+    "name": "atiel/comex",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Atiel\\Comex\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "atiel-sbritoAtiel-sbrito",
+            "email": "140023684+atielsantoss@gmail.com"
+        }
+    ],
+    "require": {}
+}
