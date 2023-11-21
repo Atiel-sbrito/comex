@@ -1,4 +1,10 @@
 <?php
+
+require_once 'database.php';
+
+$db = new Database();
+$pdo = $db->getPdo();
+
 class Produto {
     private $nome;
     private $estoque;
