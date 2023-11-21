@@ -1,4 +1,10 @@
 <?php
+
+require_once 'database.php';
+
+$db = new Database();
+$pdo = $db->getPdo();
+
 use PHPUnit\Framework\TestCase;
 
 class ProdutoTest extends TestCase {
