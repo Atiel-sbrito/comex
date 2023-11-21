@@ -1,4 +1,11 @@
 <?php
+
+
+require_once 'database.php';
+
+$db = new Database();
+$pdo = $db->getPdo();
+
 class Pedido {
     private $id;
     private $cliente;
