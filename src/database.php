@@ -20,5 +20,33 @@ class Database {
     public function getPdo() {
         return $this->pdo;
     }
+
+    public function createTables() {
+        $sql = "
+            CREATE TABLE IF NOT EXISTS clientes (
+                id INTEGER PRIMARY KEY,
+                nome TEXT NOT NULL,
+                email TEXT NOT NULL,
+                celular TEXT NOT NULL,
+                endereco TEXT NOT NULL,
+                totalCompras REAL NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS pedidos (
+                id INTEGER PRIMARY KEY,
+                cliente TEXT NOT NULL,
+                produtos TEXT NOT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS produtos (
+                id INTEGER PRIMARY KEY,
+                nome TEXT NOT NULL,
+                preco REAL NOT NULL,
+                quantidadeEmEstoque INTEGER NOT NULL
+            );
+        ";
+
+        $this->pdo->exec($sql);
+    }
 }
 ?>
